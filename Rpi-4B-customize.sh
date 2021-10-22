@@ -2,13 +2,6 @@
 #
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part2.sh
-# Description: OpenWrt DIY script part 2 (After Update feeds)
-#
 
 ([ -d files ] && rm -rf files) || echo "files not found, skip"
 ([ -d package/diy ] && rm -rf package/diy) || echo "diy not found, skip"
@@ -60,7 +53,7 @@ git clone https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dock
 # git clone https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
 
 # luci-app-unblockneteasemusic from immortalwrt
-git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic package/diy/luci-app-unblockneteasemusic
+# git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/diy/luci-app-unblockneteasemusic
 
 # rtl8812au-ac USB Wi-Fi adapter driver
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac package/diy/rtl8812au-ac
