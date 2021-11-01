@@ -36,8 +36,8 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/diy/luci-ap
 git clone https://github.com/fw876/helloworld package/diy/luci-app-ssr-plus
 
 # v2rayA: A Linux web GUI client of Project V
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/v2raya package/diy/v2raya
-sed -i "s/..\/..\/lang/\$(TOPDIR)\/feeds\/packages\/lang/g" package/diy/v2raya/Makefile
+#svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/v2raya package/diy/v2raya
+#sed -i "s/..\/..\/lang/\$(TOPDIR)\/feeds\/packages\/lang/g" package/diy/v2raya/Makefile
 
 # openwrt-gowebdav
 git clone https://github.com/immortalwrt/openwrt-gowebdav package/diy/webdav
