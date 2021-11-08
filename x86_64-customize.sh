@@ -74,6 +74,24 @@ git clone https://github.com/zsh-users/zsh-completions files/root/.oh-my-zsh/cus
 wget https://raw.githubusercontent.com/EnnawYang/openwrt-config/lean-lede/files/.zshrc -O files/root/.zshrc
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
+# Modify distfeeds.conf
+sed -i '/http/d' package/lean/default-settings/files/zzz-default-settings
+sed -i '/openwrt_luci/d' package/lean/default-settings/files/zzz-default-settings
+mkdir -p files/etc/opkg
+touch files/etc/opkg/distfeeds.conf
+echo "src/gz openwrt_core https://openwrt.cc/snapshots/targets/x86/64/packages" >> files/etc/opkg/distfeeds.conf
+echo "src/gz openwrt_base https://openwrt.cc/snapshots/packages/x86_64/base" >> files/etc/opkg/distfeeds.conf
+echo "src/gz openwrt_luci https://openwrt.cc/snapshots/packages/x86_64/luci" >> files/etc/opkg/distfeeds.conf
+echo "src/gz openwrt_packages https://openwrt.cc/snapshots/packages/x86_64/packages" >> files/etc/opkg/distfeeds.conf
+
+mkdir -p files/etc/uci-defaults/
+touch files/etc/uci-defaults/99-init-settings
+echo "#!/bin/bash" >> files/etc/uci-defaults/99-init-settings
+echo "sed -i '/check_signature/d' /etc/opkg.conf" >> files/etc/uci-defaults/99-init-settings
+echo "echo '# option check_signature' >> /etc/opkg.conf" >> files/etc/uci-defaults/99-init-settings
+echo "exit 0" >> files/etc/uci-defaults/99-init-settings
+chmod +x files/etc/uci-defaults/99-init-settings
+
 # 更改默认主题
 #sed -i 's/config internal themes/config internal themes\n    option Rosy  \"\/luci-static\/rosy\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
