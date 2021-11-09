@@ -10,7 +10,7 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 修改机器名称
-sed -i 's/OpenWrt/newifi-d2/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/Newifi-D2/g' package/base-files/files/bin/config_generate
 
 # atmaterial主题
 # git clone https://github.com/yangsongli/luci-theme-atmaterial package/mine/luci-theme-atmaterial
