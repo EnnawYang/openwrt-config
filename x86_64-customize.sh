@@ -84,14 +84,6 @@ echo "src/gz openwrt_base https://openwrt.cc/snapshots/packages/x86_64/base" >> 
 echo "src/gz openwrt_luci https://openwrt.cc/snapshots/packages/x86_64/luci" >> files/etc/opkg/distfeeds.conf
 echo "src/gz openwrt_packages https://openwrt.cc/snapshots/packages/x86_64/packages" >> files/etc/opkg/distfeeds.conf
 
-mkdir -p files/etc/uci-defaults/
-touch files/etc/uci-defaults/99-init-settings
-echo "#!/bin/bash" >> files/etc/uci-defaults/99-init-settings
-echo "sed -i '/check_signature/d' /etc/opkg.conf" >> files/etc/uci-defaults/99-init-settings
-echo "echo '# option check_signature' >> /etc/opkg.conf" >> files/etc/uci-defaults/99-init-settings
-echo "exit 0" >> files/etc/uci-defaults/99-init-settings
-chmod +x files/etc/uci-defaults/99-init-settings
-
 # 更改默认主题
 #sed -i 's/config internal themes/config internal themes\n    option Rosy  \"\/luci-static\/rosy\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
