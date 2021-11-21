@@ -3,8 +3,8 @@
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
 
-([ -d files ] && rm -rf files) || echo "files not found, skip"
-([ -d package/diy ] && rm -rf package/diy) || echo "diy not found, skip"
+rm -rf files
+rm -rf package/diy
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
