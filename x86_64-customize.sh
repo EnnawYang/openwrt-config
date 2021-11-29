@@ -44,7 +44,7 @@ git clone https://github.com/immortalwrt/openwrt-gowebdav package/diy/webdav
 git clone https://github.com/esirplayground/luci-app-poweroff package/diy/luci-app-poweroff
 
 # Luci-app-dockerman
-git clone https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
+# git clone https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
 # git clone https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
 
 # luci-app-unblockneteasemusic from immortalwrt
