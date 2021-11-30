@@ -18,11 +18,8 @@ sed -i 's/ImmortalWrt/Newifi-D2/g' package/base-files/files/bin/config_generate
 # luci-app-ssr-plus
 # git clone https://github.com/fw876/helloworld package/diy/luci-app-ssr-plus
 
-# Modify zzz-default-settings
-sed -i '/exit/d' package/emortal/default-settings/files/zzz-default-settings
-echo "sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
-echo -e "echo "DISTRIB_REVISION="18.06 build by Yang ($(date +"%Y-%m-%d"))"" >> /etc/openwrt_release" >> package/emortal/default-settings/files/zzz-default-settings
-echo "exit 0" >> package/emortal/default-settings/files/zzz-default-settings
+# Modify openwrt_release
+sed -i "s/%C/Build by Yang ($(date +"%Y-%m-%d"))/g" package/base-files/files/etc/openwrt_release
 
 # 更改默认主题
 #sed -i 's/config internal themes/config internal themes\n    option Argon  \"\/luci-static\/argon\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
