@@ -20,7 +20,7 @@ sed -i 's/OpenWrt/x86_64/g' package/base-files/files/bin/config_generate
 # git clone https://github.com/yangsongli/luci-theme-atmaterial package/diy/luci-theme-atmaterial
 
 # luci-theme-argon for 18.06 by jerrykuku
-rm -rf package/lean/luci-theme-argon
+rm -rf package/feeds/luci/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/diy/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config package/diy/luci-app-argon-config
 
