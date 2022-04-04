@@ -51,7 +51,7 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/diy/luci-a
 # git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/diy/luci-app-unblockneteasemusic
 
 # rtl8812au-ac USB Wi-Fi adapter driver
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac package/diy/rtl8812au-ac
+# svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac package/diy/rtl8812au-ac
 
 # rtl8821cu USB Wi-Fi adapter driver
 # svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu package/diy/rtl8821cu
