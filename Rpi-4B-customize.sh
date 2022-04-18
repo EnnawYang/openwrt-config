@@ -17,8 +17,8 @@ sed -i 's/OpenWrt/RaspberryPi4B/g' package/base-files/files/bin/config_generate
 # sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 放入无线默认配置，实现首次开机开启wifi
-mkdir -p files/etc/config/
-wget https://raw.githubusercontent.com/EnnawYang/openwrt-config/lean-lede/files/rpi-4b-wireless -O files/etc/config/wireless
+# mkdir -p files/etc/config/
+# wget https://raw.githubusercontent.com/EnnawYang/openwrt-config/lean-lede/files/rpi-4b-wireless -O files/etc/config/wireless
 
 # 替换Lienol的可道云
 # rm -rf package/lean/luci-app-kodexplorer
