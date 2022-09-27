@@ -60,6 +60,9 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/diy/luci-a
 # sed -i "s/START=25/START=99/g" package/lean/luci-app-docker/root/etc/init.d/dockerd
 # sed -i "s/\"\/opt\/\"/\"\/opt\/docker\/\"/g" package/lean/luci-app-docker/root/etc/docker/daemon.json
 
+# alist
+git clone https://github.com/sbwml/luci-app-alist package/diy/alist
+
 # Modify zzz-default-settings
 export orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
 export date_version=$(date +"%Y-%m-%d")
