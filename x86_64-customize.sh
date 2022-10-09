@@ -60,7 +60,7 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/diy/luci-a
 # sed -i "s/START=25/START=99/g" package/lean/luci-app-docker/root/etc/init.d/dockerd
 # sed -i "s/\"\/opt\/\"/\"\/opt\/docker\/\"/g" package/lean/luci-app-docker/root/etc/docker/daemon.json
 
-# alist
+# alist ('fatal error: fuse.h: No such file or directory', need install libfuse-dev frist)
 git clone https://github.com/sbwml/luci-app-alist package/diy/alist
 
 # Modify zzz-default-settings
