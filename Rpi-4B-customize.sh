@@ -32,6 +32,7 @@ git clone https://github.com/EnnawYang/cypress-firmware package/diy/cypress-firm
 # git clone https://github.com/yangsongli/luci-theme-atmaterial package/diy/luci-theme-atmaterial
 
 # luci-theme-argon for 18.06 by jerrykuku
+rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf package/feeds/luci/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/diy/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config package/diy/luci-app-argon-config
@@ -69,6 +70,11 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/diy/luci-a
 # sed -i "s/START=25/START=99/g" package/lean/luci-app-docker/root/etc/init.d/dockerd
 # sed -i "s/\"\/opt\/\"/\"\/opt\/docker\/\"/g" package/lean/luci-app-docker/root/etc/docker/daemon.json
 
+# update golang 19.x
+rm -rf feeds/packages/lang/golang
+rm -rf package/feeds/packages/golang
+svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
+
 # alist ('fatal error: fuse.h: No such file or directory', need install libfuse-dev frist)
 git clone https://github.com/sbwml/luci-app-alist package/diy/alist
 
@@ -104,3 +110,5 @@ echo "src/gz openwrt_packages https://openwrt.cc/snapshots/packages/aarch64_cort
 
 # 允许远程主机连接到本地 SSH 转发端口。如您的网络是公网，建议注释掉此项。
 #sed -i "4a\ \toption GatewayPorts 'on'" package/network/services/dropbear/files/dropbear.config
+
+./scripts/feeds install -a -f
