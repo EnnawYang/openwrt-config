@@ -32,9 +32,9 @@ git clone https://github.com/EnnawYang/cypress-firmware package/diy/cypress-firm
 # git clone https://github.com/yangsongli/luci-theme-atmaterial package/diy/luci-theme-atmaterial
 
 # luci-theme-argon for 18.06 by jerrykuku
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf package/feeds/luci/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/diy/luci-theme-argon
+# rm -rf feeds/luci/themes/luci-theme-argon
+# rm -rf package/feeds/luci/luci-theme-argon
+# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/diy/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config package/diy/luci-app-argon-config
 
 # luci-app-ssr-plus
@@ -45,7 +45,7 @@ git clone https://github.com/fw876/helloworld package/diy/luci-app-ssr-plus
 #sed -i "s/..\/..\/lang/\$(TOPDIR)\/feeds\/packages\/lang/g" package/diy/v2raya/Makefile
 
 # openwrt-gowebdav
-git clone https://github.com/immortalwrt/openwrt-gowebdav package/diy/webdav
+# git clone https://github.com/immortalwrt/openwrt-gowebdav package/diy/webdav
 
 # A tele-aria2 bot for openwrt
 # git clone https://github.com/EnnawYang/tele-aria2-openwrt package/diy/tele-aria2-openwrt
