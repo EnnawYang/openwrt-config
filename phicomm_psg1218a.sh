@@ -10,7 +10,7 @@ rm -rf package/diy
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 修改机器名称
-sed -i 's/OpenWrt/Phicomm_K2/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/phicomm_psg1218a/g' package/base-files/files/bin/config_generate
 
 # luci-app-ssr-plus
 git clone https://github.com/fw876/helloworld package/diy/luci-app-ssr-plus

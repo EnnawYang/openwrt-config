@@ -10,7 +10,7 @@ rm -rf package/diy
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 修改机器名称
-sed -i 's/OpenWrt/DomyWifi-DW33D/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/domywifi_dw33d/g' package/base-files/files/bin/config_generate
 
 # atmaterial主题
 # git clone https://github.com/yangsongli/luci-theme-atmaterial package/mine/luci-theme-atmaterial
