@@ -70,10 +70,11 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/diy/luci-a
 # sed -i "s/START=25/START=99/g" package/lean/luci-app-docker/root/etc/init.d/dockerd
 # sed -i "s/\"\/opt\/\"/\"\/opt\/docker\/\"/g" package/lean/luci-app-docker/root/etc/docker/daemon.json
 
-# update golang 19.x
+# update golang 1.20.x
 rm -rf feeds/packages/lang/golang
 rm -rf package/feeds/packages/golang
-svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
+#svn export https://github.com/sbwml/packages_lang_golang/branches/20.x feeds/packages/lang/golang
+git clone -b 20.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 # alist ('fatal error: fuse.h: No such file or directory', need install libfuse-dev frist)
 git clone https://github.com/sbwml/luci-app-alist package/diy/alist
